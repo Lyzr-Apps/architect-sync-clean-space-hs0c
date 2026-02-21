@@ -142,7 +142,7 @@ type ScreenType = 'dashboard' | 'notes' | 'history' | 'settings'
 const AGENTS = [
   { id: MANAGER_AGENT_ID, name: 'Meeting Processing Coordinator', purpose: 'Orchestrates end-to-end meeting processing' },
   { id: CALENDAR_AGENT_ID, name: 'Calendar Context Agent', purpose: 'Extracts calendar metadata and attendees' },
-  { id: TRANSCRIPT_AGENT_ID, name: 'Transcript Retrieval Agent', purpose: 'Retrieves and structures meeting transcripts' },
+  { id: TRANSCRIPT_AGENT_ID, name: 'Email Context Agent', purpose: 'Retrieves meeting-related emails and context from Gmail' },
   { id: ANALYST_AGENT_ID, name: 'Meeting Analyst Agent', purpose: 'Analyzes content for decisions, actions, risks' },
   { id: SEARCH_AGENT_ID, name: 'Meeting Search Agent', purpose: 'Searches past meeting notes by query' },
 ]
@@ -1419,11 +1419,11 @@ function SettingsScreen() {
           <div className="flex items-center justify-between bg-secondary/40 rounded-md p-3 border border-border">
             <div className="flex items-center gap-3">
               <div className="h-8 w-8 rounded-md bg-accent/20 flex items-center justify-center">
-                <HiUserGroup className="h-4 w-4 text-accent" />
+                <HiDocumentText className="h-4 w-4 text-accent" />
               </div>
               <div>
-                <p className="text-sm font-medium">Microsoft Teams</p>
-                <p className="text-xs text-muted-foreground">Meeting transcripts and recordings</p>
+                <p className="text-sm font-medium">Gmail</p>
+                <p className="text-xs text-muted-foreground">Meeting-related emails, threads, and attachments</p>
               </div>
             </div>
             <div className="flex items-center gap-1.5">

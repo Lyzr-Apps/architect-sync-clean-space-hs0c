@@ -1,5 +1,5 @@
 {
-  "agent_name": "Transcript Retrieval Agent",
+  "agent_name": "Email Context Agent",
   "agent_id": "699959887929f75fa2684eac",
   "agent_type": "json",
   "accessor": "json",
@@ -7,23 +7,24 @@
   "response_schema": {
     "type": "json_schema",
     "json_schema": {
-      "name": "TranscriptResponse",
+      "name": "EmailContextResponse",
       "strict": true,
       "schema": {
         "type": "object",
         "properties": {
           "meeting_title": {"type": "string"},
-          "transcript_available": {"type": "boolean"},
+          "emails_found": {"type": "boolean"},
           "messages": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
                 "timestamp": {"type": "string"},
-                "speaker": {"type": "string"},
+                "sender": {"type": "string"},
+                "subject": {"type": "string"},
                 "content": {"type": "string"}
               },
-              "required": ["timestamp", "speaker", "content"],
+              "required": ["timestamp", "sender", "subject", "content"],
               "additionalProperties": false
             }
           },
@@ -39,11 +40,11 @@
               "additionalProperties": false
             }
           },
-          "chat_summary": {"type": "string"},
-          "participant_count": {"type": "number"},
-          "duration_minutes": {"type": "number"}
+          "email_summary": {"type": "string"},
+          "thread_count": {"type": "number"},
+          "participant_count": {"type": "number"}
         },
-        "required": ["meeting_title", "transcript_available", "messages", "shared_files", "chat_summary", "participant_count", "duration_minutes"],
+        "required": ["meeting_title", "emails_found", "messages", "shared_files", "email_summary", "thread_count", "participant_count"],
         "additionalProperties": false
       }
     }

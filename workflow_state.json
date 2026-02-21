@@ -8,7 +8,7 @@
       "agent_id": "699959877929f75fa2684ea8",
       "type": "sub-agent"
     },
-    "transcript_retrieval_agent": {
+    "email_context_agent": {
       "agent_id": "699959887929f75fa2684eac",
       "type": "sub-agent"
     },
