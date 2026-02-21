@@ -1,0 +1,115 @@
+{
+  "agent_name": "Meeting Processing Coordinator",
+  "agent_id": "699959a07929f75fa2684eb4",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "MeetingProcessingResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "meeting_metadata": {
+            "type": "object",
+            "properties": {
+              "title": {"type": "string"},
+              "date_time": {"type": "string"},
+              "duration_minutes": {"type": "number"},
+              "organizer": {"type": "string"},
+              "attendee_count": {"type": "number"},
+              "timezone": {"type": "string"}
+            },
+            "required": ["title", "date_time", "duration_minutes", "organizer", "attendee_count", "timezone"],
+            "additionalProperties": false
+          },
+          "summary": {"type": "string"},
+          "technical_decisions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "decision": {"type": "string"},
+                "context": {"type": "string"},
+                "rationale": {"type": "string"}
+              },
+              "required": ["decision", "context", "rationale"],
+              "additionalProperties": false
+            }
+          },
+          "action_items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": {"type": "string"},
+                "owner": {"type": "string"},
+                "deadline": {"type": "string"},
+                "priority": {"type": "string"},
+                "status": {"type": "string"}
+              },
+              "required": ["item", "owner", "deadline", "priority", "status"],
+              "additionalProperties": false
+            }
+          },
+          "risks_and_blockers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "description": {"type": "string"},
+                "severity": {"type": "string"},
+                "impact": {"type": "string"},
+                "mitigation": {"type": "string"}
+              },
+              "required": ["description", "severity", "impact", "mitigation"],
+              "additionalProperties": false
+            }
+          },
+          "client_requirements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "requirement": {"type": "string"},
+                "source": {"type": "string"},
+                "priority": {"type": "string"}
+              },
+              "required": ["requirement", "source", "priority"],
+              "additionalProperties": false
+            }
+          },
+          "architecture_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "reference": {"type": "string"},
+                "context": {"type": "string"}
+              },
+              "required": ["reference", "context"],
+              "additionalProperties": false
+            }
+          },
+          "open_items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": {"type": "string"},
+                "type": {"type": "string"},
+                "assigned_to": {"type": "string"}
+              },
+              "required": ["item", "type", "assigned_to"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["meeting_metadata", "summary", "technical_decisions", "action_items", "risks_and_blockers", "client_requirements", "architecture_references", "open_items"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

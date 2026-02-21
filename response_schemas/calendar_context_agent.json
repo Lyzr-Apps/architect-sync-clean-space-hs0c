@@ -1,0 +1,43 @@
+{
+  "agent_name": "Calendar Context Agent",
+  "agent_id": "699959877929f75fa2684ea8",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "CalendarContextResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "meeting_title": {"type": "string"},
+          "date_time": {"type": "string"},
+          "duration_minutes": {"type": "number"},
+          "organizer": {"type": "string"},
+          "attendees": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {"type": "string"},
+                "email": {"type": "string"},
+                "response_status": {"type": "string"}
+              },
+              "required": ["name", "email", "response_status"],
+              "additionalProperties": false
+            }
+          },
+          "agenda": {"type": "string"},
+          "conference_link": {"type": "string"},
+          "recurrence": {"type": "string"},
+          "description": {"type": "string"},
+          "timezone": {"type": "string"}
+        },
+        "required": ["meeting_title", "date_time", "duration_minutes", "organizer", "attendees", "agenda", "conference_link", "recurrence", "description", "timezone"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

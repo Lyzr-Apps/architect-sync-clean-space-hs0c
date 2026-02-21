@@ -1,0 +1,46 @@
+{
+  "agent_name": "Meeting Search Agent",
+  "agent_id": "699959b17929f75fa2684eb9",
+  "description": "Searches and retrieves past processed meeting notes based on user queries \u2014 filters by date, participant, topic, action item owner, or technical keyword",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "query": "string",
+    "total_results": "number",
+    "results": [
+      {
+        "meeting_title": "string",
+        "meeting_date": "string",
+        "relevance_score": "string",
+        "matching_section": "string",
+        "excerpt": "string",
+        "key_participants": [
+          "string"
+        ]
+      }
+    ],
+    "suggested_refinements": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "query": "sample string",
+    "total_results": 0,
+    "results": [
+      {
+        "meeting_title": "sample string",
+        "meeting_date": "sample string",
+        "relevance_score": "sample string",
+        "matching_section": "sample string",
+        "excerpt": "sample string",
+        "key_participants": [
+          "sample string"
+        ]
+      }
+    ],
+    "suggested_refinements": [
+      "sample string"
+    ]
+  }
+}

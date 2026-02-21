@@ -1,0 +1,118 @@
+{
+  "agent_name": "Meeting Processing Coordinator",
+  "agent_id": "699959a07929f75fa2684eb4",
+  "description": "Orchestrates end-to-end meeting processing \u2014 routes meeting data to sub-agents, aggregates calendar context, transcript data, and analysis into final structured meeting notes",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "meeting_metadata": {
+      "title": "string",
+      "date_time": "string",
+      "duration_minutes": "number",
+      "organizer": "string",
+      "attendee_count": "number",
+      "timezone": "string"
+    },
+    "summary": "string",
+    "technical_decisions": [
+      {
+        "decision": "string",
+        "context": "string",
+        "rationale": "string"
+      }
+    ],
+    "action_items": [
+      {
+        "item": "string",
+        "owner": "string",
+        "deadline": "string",
+        "priority": "string",
+        "status": "string"
+      }
+    ],
+    "risks_and_blockers": [
+      {
+        "description": "string",
+        "severity": "string",
+        "impact": "string",
+        "mitigation": "string"
+      }
+    ],
+    "client_requirements": [
+      {
+        "requirement": "string",
+        "source": "string",
+        "priority": "string"
+      }
+    ],
+    "architecture_references": [
+      {
+        "reference": "string",
+        "context": "string"
+      }
+    ],
+    "open_items": [
+      {
+        "item": "string",
+        "type": "string",
+        "assigned_to": "string"
+      }
+    ]
+  },
+  "example_response": {
+    "meeting_metadata": {
+      "title": "sample string",
+      "date_time": "sample string",
+      "duration_minutes": 0,
+      "organizer": "sample string",
+      "attendee_count": 0,
+      "timezone": "sample string"
+    },
+    "summary": "sample string",
+    "technical_decisions": [
+      {
+        "decision": "sample string",
+        "context": "sample string",
+        "rationale": "sample string"
+      }
+    ],
+    "action_items": [
+      {
+        "item": "sample string",
+        "owner": "sample string",
+        "deadline": "sample string",
+        "priority": "sample string",
+        "status": "sample string"
+      }
+    ],
+    "risks_and_blockers": [
+      {
+        "description": "sample string",
+        "severity": "sample string",
+        "impact": "sample string",
+        "mitigation": "sample string"
+      }
+    ],
+    "client_requirements": [
+      {
+        "requirement": "sample string",
+        "source": "sample string",
+        "priority": "sample string"
+      }
+    ],
+    "architecture_references": [
+      {
+        "reference": "sample string",
+        "context": "sample string"
+      }
+    ],
+    "open_items": [
+      {
+        "item": "sample string",
+        "type": "sample string",
+        "assigned_to": "sample string"
+      }
+    ]
+  }
+}

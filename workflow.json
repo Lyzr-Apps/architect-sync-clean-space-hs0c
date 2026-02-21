@@ -1,0 +1,20 @@
+{
+  "nodes": [
+    {"id": "input_node", "type": "Input", "label": "User Input", "nodeCategory": "input"},
+    {"id": "manager_agent", "type": "Agent", "label": "Meeting Processing Coordinator", "nodeCategory": "agent", "agent_id": "699959a07929f75fa2684eb4"},
+    {"id": "calendar_agent", "type": "Agent", "label": "Calendar Context Agent", "nodeCategory": "agent", "agent_id": "699959877929f75fa2684ea8"},
+    {"id": "transcript_agent", "type": "Agent", "label": "Transcript Retrieval Agent", "nodeCategory": "agent", "agent_id": "699959887929f75fa2684eac"},
+    {"id": "analyst_agent", "type": "Agent", "label": "Meeting Analyst Agent", "nodeCategory": "agent", "agent_id": "69995988db37e68c87a52d60"},
+    {"id": "search_agent", "type": "Agent", "label": "Meeting Search Agent", "nodeCategory": "agent", "agent_id": "699959b17929f75fa2684eb9"},
+    {"id": "output_node", "type": "Output", "label": "Output", "nodeCategory": "end"}
+  ],
+  "edges": [
+    {"source": "input_node", "target": "manager_agent"},
+    {"source": "manager_agent", "target": "calendar_agent"},
+    {"source": "manager_agent", "target": "transcript_agent"},
+    {"source": "manager_agent", "target": "analyst_agent"},
+    {"source": "input_node", "target": "search_agent"},
+    {"source": "manager_agent", "target": "output_node"},
+    {"source": "search_agent", "target": "output_node"}
+  ]
+}

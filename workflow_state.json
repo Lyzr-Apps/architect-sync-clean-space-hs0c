@@ -1,0 +1,31 @@
+{
+  "agents": {
+    "meeting_processing_coordinator": {
+      "agent_id": "699959a07929f75fa2684eb4",
+      "type": "manager"
+    },
+    "calendar_context_agent": {
+      "agent_id": "699959877929f75fa2684ea8",
+      "type": "sub-agent"
+    },
+    "transcript_retrieval_agent": {
+      "agent_id": "699959887929f75fa2684eac",
+      "type": "sub-agent"
+    },
+    "meeting_analyst_agent": {
+      "agent_id": "69995988db37e68c87a52d60",
+      "type": "sub-agent"
+    },
+    "meeting_search_agent": {
+      "agent_id": "699959b17929f75fa2684eb9",
+      "type": "independent",
+      "rag_id": "69995926e12ce168202fcc11"
+    }
+  },
+  "knowledge_bases": {
+    "meeting_notes_kb": {
+      "rag_id": "69995926e12ce168202fcc11",
+      "rag_name": "meetingnoteskbhffz"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "agent_name": "Transcript Retrieval Agent",
+  "agent_id": "699959887929f75fa2684eac",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "TranscriptResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "meeting_title": {"type": "string"},
+          "transcript_available": {"type": "boolean"},
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "timestamp": {"type": "string"},
+                "speaker": {"type": "string"},
+                "content": {"type": "string"}
+              },
+              "required": ["timestamp", "speaker", "content"],
+              "additionalProperties": false
+            }
+          },
+          "shared_files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "file_name": {"type": "string"},
+                "file_url": {"type": "string"}
+              },
+              "required": ["file_name", "file_url"],
+              "additionalProperties": false
+            }
+          },
+          "chat_summary": {"type": "string"},
+          "participant_count": {"type": "number"},
+          "duration_minutes": {"type": "number"}
+        },
+        "required": ["meeting_title", "transcript_available", "messages", "shared_files", "chat_summary", "participant_count", "duration_minutes"],
+        "additionalProperties": false
+      }
+    }
+  }
+}
